@@ -31,6 +31,13 @@ jobs:
     - name: Run OONI Parser (ooni_domains.lst)
       run: python "src/step 5 ooni list/ooni_list.py"
 
+    # --- НАЧАЛО ИЗМЕНЕНИЯ ---
+    - name: Add custom domains from google-deepmind.txt
+      run: |
+        echo "Appending google-deepmind.txt to community.lst..."
+        cat google-deepmind.txt >> community.lst
+    # --- КОНЕЦ ИЗМЕНЕНИЯ ---
+
     - name: Run Domain Sum Up script (domains_all.lst) ##Community.lst goes from root folder
       run: python "src/step 5 ooni list/domain_sum.py"
 
@@ -184,5 +191,3 @@ jobs:
         gh release view "$TAG_NAME"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
