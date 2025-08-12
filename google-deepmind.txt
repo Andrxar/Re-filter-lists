@@ -17,3 +17,14 @@ notebooklm.google
 notebooklm.google.com
 jules.google
 jules.google.com
+www.googletagmanager.com
+googletagmanager.com
+www.google.com
+secure.google.com
+googleusercontent.com
+clients1.google.com
+clients2.google.com
+clients3.google.com
+clients4.google.com
+clients5.google.com
+clients6.google.com
